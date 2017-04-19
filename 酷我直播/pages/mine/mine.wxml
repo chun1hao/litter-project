@@ -1,0 +1,6 @@
+<!--logs.wxml-->
+<view class="container log-list">
+ 
+    <text class="log-item">我的页面在这里</text>
+
+</view>

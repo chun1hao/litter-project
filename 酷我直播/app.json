@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/discovery/discovery",
+    "pages/focus/focus",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText": "微信",
+    "navigationBarTextStyle":"white"
+  }
+}

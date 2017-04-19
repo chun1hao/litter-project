@@ -1,0 +1,70 @@
+<view class="top-nav">
+  <text class="left active">热点</text> 
+  <text class="right">关注</text>
+</view>
+
+<view class="middle-nav">
+  <text class="{{index==idx ? 'active' : ''}}"     wx:for="{{nav}}" data-num="{{index}}" wx:key="{{index}}" bindtap="tap">{{item}}</text>
+</view>
+<loading wx:if="{{isshow}}">加载中...</loading>
+<view class="main">
+  <scroll-view scroll-y="true" style="height:100%;"  bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+  <view wx:if="{{hasRefesh}}" class="refesh">
+    <icon type="waiting" size="20"/>
+    <!--<loading>212</loading>-->
+    <text>刷新中...</text>
+  </view>
+  <swiper class="swip" bindchange="change" circular="true" current="{{idx}}">
+    <swiper-item class="item">
+      <view class="list" wx:key="{{index}}" wx:for="{{liveData}}">
+        <image class="img"src="{{item.url}}" />
+        <text>{{item.info}}</text>
+      </view>
+    </swiper-item>
+      <swiper-item class="item">
+        <view class="list" wx:key="{{index}}" wx:for="{{lifeData}}" >
+            <image class="img"src="{{item.url}}" />
+            <text>{{item.info}}</text>
+          </view>
+      </swiper-item>
+      <swiper-item class="item">
+        <view class="list" wx:key="{{index}}" wx:for="{{bgData}}" >
+            <image class="img"src="{{item.url}}" />
+            <text>{{item.info}}</text>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view wx:if="{{hasMore}}" class="more">
+        <icon type="waiting" size="20"/>
+        <text>玩命加载中...</text>
+      </view>
+    </scroll-view>
+  </view>
+
+<view class="bot-nav">
+  <view class="left">
+    <view class="index active">
+      <view class="iconfont icon-shouyeshouye"></view>
+      <text>首页</text>
+    </view>
+    <view bindtap="change2" class="dis">
+      <view class="iconfont icon-faxian"></view>
+      <text>发现</text>
+    </view>
+  </view>  
+  <view bindtap="change3" class="right">
+      <view class="maie">
+        <view class="iconfont icon-wode"></view>
+        <text>我的</text>
+      </view>
+      <view  class="exit">
+        <view bindtap="change4" class="iconfont icon-tuichu"></view>
+        <text>退出</text>
+      </view>
+  </view>
+  <view class="car">
+      <text class="iconfont icon-xiangji"></text>
+  </view>
+</view>
+
+
