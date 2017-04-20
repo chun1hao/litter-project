@@ -9,7 +9,7 @@ Page({
     isshow:true,
     scrollTop : 0,
     userInfo: {},
-    nav:["最新","最嗨","最美"],
+    nav:["推荐","热门","颜值"],
     liveData:[],
     lifeData:[],
     bgData:[],

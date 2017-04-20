@@ -45,11 +45,15 @@
   border-bottom: 1.17rpx solid #d9d9d9;
 }
 .middle-nav .active{
-  color: #0dc441;
-  border-bottom: 5.85rpx solid #0dc441;
+  color: #e29142;
+  border-bottom: 5.85rpx solid #e29142;
   line-height: 77.22rpx;
 }
-
+.list .people{
+  float: right;
+  color: #ccc;
+  line-height: 50rpx;
+}
 .main{
   overflow: auto;
   position: absolute;
@@ -124,7 +128,7 @@
    font-size: 61rpx;
 }
 .bot-nav .active{
-  color: #0dc441;
+  color: #e29142;
 }
 .more{
   display: flex;

@@ -19,18 +19,21 @@
       <view class="list" wx:key="{{index}}" wx:for="{{liveData}}">
         <image class="img"src="{{item.url}}" />
         <text>{{item.info}}</text>
+        <text class="people">{{item.peo}}人</text>
       </view>
     </swiper-item>
       <swiper-item class="item">
         <view class="list" wx:key="{{index}}" wx:for="{{lifeData}}" >
             <image class="img"src="{{item.url}}" />
             <text>{{item.info}}</text>
+            <text class="people">{{item.peo}}人</text>
           </view>
       </swiper-item>
       <swiper-item class="item">
         <view class="list" wx:key="{{index}}" wx:for="{{bgData}}" >
             <image class="img"src="{{item.url}}" />
             <text>{{item.info}}</text>
+            <text class="people">{{item.peo}}人</text>
           </view>
         </swiper-item>
       </swiper>
@@ -49,7 +52,7 @@
     </view>
     <view bindtap="change2" class="dis">
       <view class="iconfont icon-faxian"></view>
-      <text>发现</text>
+      <text>搜索</text>
     </view>
   </view>  
   <view bindtap="change3" class="right">
